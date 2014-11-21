@@ -6,7 +6,7 @@ def subSeries(series,threshold):
 	counter = 0
 	tempSeries = []
 	longestSeries = []
-	while len(series) > 1:
+	while len(series) > 0:
 		currentTotal += series[counter]
 		if currentTotal > threshold:
 			if len(tempSeries) > len(longestSeries):
@@ -19,8 +19,8 @@ def subSeries(series,threshold):
 			tempSeries.append(series[counter])
 			counter += 1
 		if counter >= len(series):
+			if len(tempSeries) > len(longestSeries):
+				longestSeries = tempSeries
 			break
 	return longestSeries
-
-result = subSeries(series,threshold)
-print(result)
+print(subSeries(series,threshold))
