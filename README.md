@@ -1,4 +1,4 @@
-quiz
+Quiz
 ====
 This is the code for Adam Camerons Quiz.
 
